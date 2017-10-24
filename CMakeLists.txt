@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.2)
 set(source_files_relative
 	src/main.cpp
 	src/Point.cpp
+	src/MinimumSpanningTree.cpp
 )
 set(source_files "")
 foreach(source_file_relative ${source_files_relative})

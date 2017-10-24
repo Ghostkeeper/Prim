@@ -20,7 +20,10 @@ std::string MinimumSpanningTree::toSVG() {
     //Header.
     result << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n";
 
-    //TODO: Draw edges.
+    //Draw every edge first, below the vertices.
+    for(Edge edge : edges) {
+        result << "\t<line x1=\"" << edge.start.x << "\" y1=\"" << edge.start.y << "\" x2=\"" << edge.end.x << "\" y2=\"" << edge.end.y << "\" stroke=\"red\" stroke-width=\"1\" />\n";
+    }
 
     //Draw every vertex as a circle.
     for(Point vertex : vertices) {

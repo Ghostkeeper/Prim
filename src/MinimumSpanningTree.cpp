@@ -2,6 +2,14 @@
 
 #include "MinimumSpanningTree.h"
 
+MinimumSpanningTree::Edge::Edge(Point& start, Point& end) : start(start), end(end) {
+    //Just store the two endpoints.
+}
+
+int MinimumSpanningTree::Edge::length() {
+    return start.distance(end);
+}
+
 MinimumSpanningTree::MinimumSpanningTree(const std::vector<Point> vertices) : vertices(vertices) {
     //TODO: Compute the edges of the tree.
 }

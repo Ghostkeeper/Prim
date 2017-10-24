@@ -18,6 +18,38 @@ public:
     std::vector<Point> vertices;
 
     /**
+     * Represents an edge of the tree.
+     */
+    struct Edge {
+        /**
+         * Constructs a new edge.
+         * @param start One endpoint of the edge.
+         * @param end The other endpoint of the edge.
+         */
+        Edge(Point& start, Point& end);
+
+        /**
+         * The point at which this edge starts.
+         */
+        Point& start;
+
+        /**
+         * The point at which this edge ends.
+         */
+        Point& end;
+
+        /**
+         * Computes the length of this edge.
+         * @return The length of this edge.
+         */
+        int length();
+    };
+    /**
+     * The edges that make up the minimum spanning tree that spans all vertices.
+     */
+    std::vector<Edge> edges;
+
+    /**
      * Constructs a minimum spanning tree for the complete graph between the
      * given vertices.
      * @param vertices The vertices of the graph that must be connected via a

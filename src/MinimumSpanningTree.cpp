@@ -1,3 +1,5 @@
+#include <sstream> //For stringstream.
+
 #include "MinimumSpanningTree.h"
 
 MinimumSpanningTree::MinimumSpanningTree(const std::vector<Point> vertices) : vertices(vertices) {
@@ -5,5 +7,20 @@ MinimumSpanningTree::MinimumSpanningTree(const std::vector<Point> vertices) : ve
 }
 
 std::string MinimumSpanningTree::toSVG() {
-    return "";
+    std::stringstream result;
+
+    //Header.
+    result << "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n";
+
+    //TODO: Draw edges.
+
+    //Draw every vertex as a circle.
+    for(Point vertex : vertices) {
+        result << "\t<circle cx=\"" << vertex.x << "\" cy=\"" << vertex.y << "\" r=\"1\" />\n";
+    }
+
+    //Footer.
+    result << "</svg>";
+
+    return result.str();
 }

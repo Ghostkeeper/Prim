@@ -1,6 +1,8 @@
 project(Prim)
 cmake_minimum_required(VERSION 3.2)
 
+set(CMAKE_CXX_STANDARD 11)
+
 set(source_files_relative
 	src/main.cpp
 	src/Point.cpp

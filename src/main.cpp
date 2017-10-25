@@ -16,9 +16,6 @@ int main(int num_arguments, char** arguments) {
 
 	MinimumSpanningTree tree(vertices);
 
-    //MinimumSpanningTree::Edge edge(&vertices[0], &vertices[1]);
-    //tree.edges.push_back(edge);
-
     std::cout << tree.toSVG(); //Be sure to pipe this to a file.
 	return 0;
 }

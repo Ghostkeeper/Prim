@@ -28,7 +28,7 @@ public:
      * @param other The point to compute the distance to.
      * @return The distance to the other point.
      */
-    unsigned int distance(const Point other);
+    unsigned int distance(const Point other) const;
 };
 
 #endif /* POINT_H */
